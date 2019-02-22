@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<component type="admin" name="format" version="V6R2018x">
+	<schema>
+		<basic 	name="Image" description="Image Format" hidden="false" 	registryName="" />
+			<field type="formatdetails">
+				<detail name="version" value="2" />
+				<detail name="filesuffix" value="png" />
+				<detail name="filecreator" value="creator" />
+				<detail name="filetype" value="png" />
+			</field>
+	</schema>
+</component>

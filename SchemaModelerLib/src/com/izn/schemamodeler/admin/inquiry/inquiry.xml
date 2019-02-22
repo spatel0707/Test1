@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<component type="admin" name="inquiry" version="V6R2018x">
+    <schema>
+        <basic name="APPPotentialSuppliersSummary" description="List Potential Suppliers of the Company" hidden="false"/>
+			<field type="inquirydetails">
+                <detail name="type" value="boolean"/>
+                <detail name="pattern" value="*|*|*|*|*|*|${OID}|${RELID}"/>
+                <detail name="format" value="${RELID}~${OID}"/>
+				<arguments>
+                    <param name="ID" value="objectId"/>
+                    <param name="Supplier" value="relationship_Supplier"/>
+                </arguments>
+			</field>
+	</schema>
+</component>

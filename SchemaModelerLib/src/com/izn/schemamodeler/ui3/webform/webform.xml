@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<component type="ui3" name="form" version="V6R2018x">
+    <schema>
+        <basic name="TMCFileSearchOwnerChooserForm" description="" hidden="false"/>
+        <column type="fielddetails">
+            <data>
+                <datadetail name="column" value="Type"/>
+                <datadetail name="label" value="emxTeamCentral.FindFiles.Type"/>
+                <datadetail name="description"/>
+                <datadetail name="columnType" value="businessobject"/>
+                <datadetail name="expression"/>
+                <datadetail name="href"/>
+                <datadetail name="alt"/>
+                <datadetail name="user" value=""/>
+                <datadetail name="order" value="1"/>
+                <setting>
+                    <param name="Admin Type" value="Type"/>
+                    <param name="Default" value="type_Person"/>
+                    <param name="Editable" value="false"/>
+                    <param name="Field Type" value="basic"/>
+                    <param name="Registered Suite" value="TeamCentral"/>
+                    <param name="Required" value="true"/>
+                    <param name="Show Type Icon" value="true"/>
+                </setting>
+				<accessdetail>
+					<access name="user" value="Private Discussion"/>		
+				</accessdetail>
+            </data>
+        </column>
+       </schema>
+</component>

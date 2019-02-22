@@ -1,0 +1,204 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+ xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+           jxb:version="2.1"
+
+>
+  <xs:element name="component">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="schema" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="basic">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="name" use="optional"/>
+                      <xs:attribute type="xs:string" name="description" use="optional"/>
+                      <xs:attribute type="xs:string" name="hidden" use="optional"/>
+                      <xs:attribute type="xs:string" name="registryName" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="field">
+                <xs:annotation>
+                  <xs:documentation>keyword to use enforce locking is  "enforce" or "!enforce" to remove locking keyword to use enforce locking is  "enforce" or "!enforce" to remove locking</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="detail" maxOccurs="unbounded" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>Sequence which is visible in business&lt;detail name="majorsequence" value="">  comma separated  comma separated  Sequence which is visible in business&lt;detail name="majorsequence" value="">  comma separated  comma separated</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="name" use="optional"/>
+                            <xs:attribute type="xs:string" name="value" use="optional">
+                               <xs:annotation>
+                                  <xs:appinfo>
+                                   <jxb:property name="valueAttribute"/>
+                                 </xs:appinfo>
+                                  </xs:annotation>
+                            </xs:attribute>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="type" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="allstate">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="allstateaccess" maxOccurs="unbounded" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>value for access is  comma separated  value for access is  comma separated</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="user" use="optional"/>
+                            <xs:attribute type="xs:string" name="access" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="enabled" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="state" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="statebasic">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="statedetail" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="name" use="optional"/>
+                                  <xs:attribute type="xs:string" name="value" use="optional">
+                                    <xs:annotation>
+                                      <xs:appinfo>
+                                         <jxb:property name="valueAttribute"/>
+                                     </xs:appinfo>
+                                  </xs:annotation>
+                                  </xs:attribute>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="trigger">
+                            <xs:annotation>
+                              <xs:documentation>&lt;statedetail name = "beforeStateName" value =""/>  To define sequence of states&lt;statedetail name = "beforeStateName" value =""/>  To define sequence of states&lt;statedetail name = "beforeStateName" value =""/>  To define sequence of states&lt;statedetail name = "beforeStateName" value =""/>  To define sequence of states</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="event" maxOccurs="unbounded" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="eventdetail" maxOccurs="unbounded" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="type" use="optional"/>
+                                              <xs:attribute type="xs:string" name="program" use="optional"/>
+                                              <xs:attribute type="xs:string" name="input" use="optional"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:string" name="name" use="optional"/>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="access">
+                            <xs:annotation>
+                              <xs:documentation>value for access is  comma separated  value for access is  comma separated  value for access is  comma separated  value for access is  comma separated</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="accessdetails" maxOccurs="unbounded" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation>value for access is  comma separated  value for access is  comma separated  value for access is  comma separated  value for access is  comma separated</xs:documentation>
+                                  </xs:annotation>
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="user" use="optional"/>
+                                        <xs:attribute type="xs:string" name="access" use="optional"/>
+                                        <xs:attribute type="xs:string" name="filter" use="optional"/>
+                                        <xs:attribute type="xs:string" name="key" use="optional"/>
+                                        <xs:attribute type="xs:string" name="organization" use="optional"/>
+                                        <xs:attribute type="xs:string" name="project" use="optional"/>
+                                        <xs:attribute type="xs:string" name="maturity" use="optional"/>
+                                        <xs:attribute type="xs:string" name="owner" use="optional"/>
+                                        <xs:attribute type="xs:string" name="category" use="optional"/>
+                                        <xs:attribute type="xs:string" name="reserve" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="name" use="optional"/>
+                        <xs:attribute type="xs:string" name="registryName" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="signature">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="signaturebasic" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="signaturedetail" maxOccurs="unbounded" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="branch" use="optional"/>
+                                        <xs:attribute type="xs:string" name="value" use="optional">
+                                          <xs:annotation>
+                                              <xs:appinfo>
+                                                 <jxb:property name="valueAttribute"/>
+                                            </xs:appinfo>
+                                           </xs:annotation>
+                                        </xs:attribute>
+                                        <xs:attribute type="xs:string" name="filter" use="optional"/>
+                                        <xs:attribute type="xs:string" name="approve" use="optional"/>
+                                        <xs:attribute type="xs:string" name="reject" use="optional"/>
+                                        <xs:attribute type="xs:string" name="ignore" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="fromState" use="optional"/>
+                              <xs:attribute type="xs:string" name="toState" use="optional"/>
+                              <xs:attribute type="xs:string" name="name" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="type"/>
+      <xs:attribute type="xs:string" name="name"/>
+      <xs:attribute type="xs:string" name="version"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

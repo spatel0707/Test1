@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<component type="ui3" name="table" version="V6R2018x">
+    <schema>
+        <basic name="APPAttachmentsList" description="Attachment list Table" hidden="false" registryName="table_APPAttachmentsList"/>
+        <column type="fielddetails">
+            <data>
+                <datadetail name="column" value="Icon"/>
+                <datadetail name="label"/>
+                <datadetail name="description"/>
+                <datadetail name="columnType"/>
+                <datadetail name="expression"/>
+                <datadetail name="href"/>
+                <datadetail name="alt"/>
+                <datadetail name="user" value="all"/>
+                <datadetail name="order" value="1"/>
+                <setting>
+                    <param name="Column Icon" value="images/iconColHeadLocked.gif"/>
+                    <param name="Column Type" value="Icon"/>
+                    <param name="Registered Suite" value="Components"/>
+                </setting>
+                <accessdetail>
+					<access name="user" value="Private Discussion"/>		
+				</accessdetail>
+            </data>
+        </column>
+    </schema>
+</component>

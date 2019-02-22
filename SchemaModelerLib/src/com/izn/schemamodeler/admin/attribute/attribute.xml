@@ -1,0 +1,61 @@
+<component type = "admin" name ="attribute" version="V6R2016x">
+<schema>
+	<basic name="PMSIsValid" description="" hidden="" registryName="">
+		<field type = "attributedetails">
+			<detail name="type" value="String"/>
+			<detail name="Owner" value="TESTPRG2"/>
+			<detail name="ownerkind" value=""/>
+			<detail name="multiline" value="true"/>
+			<detail name="maxlength" value="350"/>
+			<detail name="dimension" value="Mass/Weight"/>
+			<detail name="valuetype" value=""/>
+			<detail name="default" value="False"/>	
+			<detail name="resetonclone" value="True"/>
+			<detail name="resetonrevision" value="True"/>
+		</field>
+	</basic>
+	<range>
+			<rangedetail type = "between" value="13,false,24,true"/>
+			<rangedetail type = "Equal" value="34"/>
+				<rangedetail type = "Equal" value="35"/>
+					<rangedetail type = "Equal" value="36"/>
+			<rangedetail type = "Not Equal" value="45"/>
+	</range>
+	<trigger>
+		<event name = "Modify">
+			<eventdetail type = "check" program = "emxTriggerManager" input = "AttributePMSIsValidCModfiyhcheck"/>
+			<eventdetail type = "action" program = "emxTriggerManager" input = "AttributePMSIsValidCModfiyAction"/>
+			<eventdetail type = "override" program = "emxTriggerManager" input = ""/>
+		</event>
+	</trigger>
+</schema>
+<schema>
+	<basic name="PMSCustomerType" description="" hidden="" registryName="">
+		<field type = "attributedetails">
+			<detail name="type" value="String"/>
+			<detail name="Owner" value=""/>
+			<detail name="ownerkind" value=""/>
+			<detail name="multiline" value="false"/>
+			<detail name="maxlength" value="200"/>
+			<detail name="dimension" value=""/>
+			<detail name="valuetype" value=""/>
+			<detail name="default" value=""/>	
+			<detail name="resetonclone" value="false"/>
+			<detail name="resetonrevision" value="false"/>
+		</field>
+	</basic>
+	<range>
+			 
+			<rangedetail type = "Equal" value="External"/>
+			<rangedetail type = "Equal" value="internal"/>
+			 
+	</range>
+	<trigger>
+		<event name = "Modify">
+			<eventdetail type = "check" program = "emxTriggerManager" input = "AttributePMSCustomerTypecheck"/>
+			<eventdetail type = "action" program = "emxTriggerManager" input = ""/>
+			<eventdetail type = "override" program = "emxTriggerManager" input = ""/>
+		</event>
+	</trigger>
+</schema>
+</component>

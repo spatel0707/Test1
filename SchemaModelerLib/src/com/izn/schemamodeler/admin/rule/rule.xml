@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<component type="admin" name="rule" version="V6R2018x">
+   <schema>
+        <basic name="ChangeControlConnectionComposeeRule1" description="Description of ChangeControlConnectionComposeeRule" hidden="false" registryName=""/>
+        <field type="ruledetails">
+            <detail name="governedAttribute" value="ABB AIAO, 3DMessaging"/>
+            <detail name="governedForms" value="ABBETRFormTestCertificate, ABBDocumentForm"/>
+            <detail name="governedPrograms" value="ABBAnnouncement, ABBAccessUtil"/>
+            <detail name="governedRelationships" value=" 3DInsightRepInstance, ABB Affected Code"/>
+	   </field>
+		<objectAcess>
+			<accessdetail name="ADDirk" value="read,modify"/>
+		</objectAcess>
+    </schema>
+</component>
